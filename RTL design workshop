@@ -1,0 +1,8 @@
+Day1:
+Introduction to iverilog,Design and Test Bench
+RTL design is the implementation of Spec
+What is Simulator?
+1.Simulator is a tool used to simulate the design
+-iverilog:
+-Design:
+-Test Bench:
