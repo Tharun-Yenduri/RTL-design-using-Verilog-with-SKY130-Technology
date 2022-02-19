@@ -1,4 +1,7 @@
 Day1:
+What is RTL Design?
+RTL Design is the Beharvioral Representation of required specification
+image
 Introduction to iverilog,Design and Test Bench
 RTL design is the implementation of Spec
 What is Simulator?
@@ -29,4 +32,36 @@ lab_checking in desktop
 gtkwave_lab1checking Screenshot
 To check the Verilog file and the testbench file:
 1.gvim file.v -o tb_file.v
-verilog checking
+verilog checking image
+What is Synthesis?
+1.RTL to Gate level transition is called synthesis.
+2.The Design is converted into gates and connections are made between gates
+3.So after applying design and .lib to synthesizer a netlist file will be generated.
+image of synthesis
+The above image depicts synthesis of design and .lib file will result a netlist file.
+What is Synthesizer?
+1.The tool which is used for converting the RTL to Netlist.
+2.Yosys is the synthesizer is used in the workshop.
+Flow of Yosys synthesizer:
+yosys_flow image
+The above image depicts when we apply design and .lib to yosys(synthesizer) it will give the netlist
+from the above image there are two observations made:
+1.Netlist is nothing but the representation of design in the form of standard cells that are present in the .lib
+2.The commands used are:
+  1.read_verilog is used to read the design
+  2.read_liberty is used to read the .lib
+  3.write_verilog is used to get the netlist file  
+How to verify the synthesis?
+verify_synthesis image
+The above figure shows we need to apply netlist and testbench to iverilog(simulator) then we will get the vcd file and by giving gtkwave command the waveform will depicts
+from the above figure there are two observations made:
+1.The resultant waveform from the simulator after synthesis and waveform from simulator before synthesis should be same to get the correct synthesis
+2.The set of primary inputs and outputs will remain same between RTL design and synthesisized netlist as same testbench is being used.
+What is .lib?
+1.It is the collection of logical modules.
+2.It include basic gates like And gate, Or gate...etc..
+  1.Different flavors of same gate
+    a.2 input AND gate,3 input AND gate,4 input AND gate
+    b.slower,medium,faster of the gate  
+Why differnet flavors of gate?
+a
