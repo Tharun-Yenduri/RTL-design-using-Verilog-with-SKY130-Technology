@@ -64,4 +64,29 @@ What is .lib?
     a.2 input AND gate,3 input AND gate,4 input AND gate
     b.slower,medium,faster of the gate  
 Why differnet flavors of gate?
+Combinational delay in logic path determines the maximum speed of operation of digital logic circuit.
+image of flipflop
+As per the above image the propagation delay of combinational circuit should be as minimum for the maximum speed of operation of digital logic circuit,so faster cells to be used to reduce the the propagation delay of combinational circuit
+slower cells
+constrains
+netlist
+lab4:
+After cloning the git,type yosys to check yosys got invoked in the path
+lab3_verilog_1
+To read the liberty file use the command read_liberty -lib ./my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+To read the design use the command read_verilog good_mux.v
+lab3_verilog_2
+To synthesis the module use the command synth -top good_mux
+To convert the RTL to netlist use the abc command  abc -liberty ../my_lib/lib/sky130_fd_sc_hd__tt_025C_1v80.lib 
+lab3_verilog_3
+lab3_verilog_4
+To view the graphical representation of netlist type show
+lab3_verilog_5
+lab3_verilog_6
+To write the netlist use the command write_verilog -noattr good_mux_netlist.v
+To view the netlist use !gvim good_mux_netlist.v
+lab3_verilog_7
+lab3_verilog_8
+Day2:
+lab4_verilog_1,2,3,4
 
