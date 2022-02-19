@@ -20,3 +20,13 @@ testbench1_SS
 Iverilog based Simulation flow:
 The design and the Test Bench(TB) are applied to simulator(iverilog) as we know that simulator always looks for change in input value so that there will be change in output value,
 The Simulator(iverilog) generates the change in output in VCD(Value Change Dump) format and to view the VCD file GTKwave is used to check the output in waveform.
+lab_checking in desktop
+-To simulate the design as we know that design and testbench are need to applied to simulator and this can be done by using below command:
+1.iverilog design_file(verilog) test_bench    ex: iverilog good_mux.v tb_good_mux.v
+2.A file ./a.out file is generated in the path
+3.To see the vcd file of desired design we need to give ./a.out as a command
+4.To generate the waveform of vcd file the command we used is gtkwave tb_good_mux.vcd
+gtkwave_lab1checking Screenshot
+To check the Verilog file and the testbench file:
+1.gvim file.v -o tb_file.v
+verilog checking
