@@ -3,6 +3,20 @@ Introduction to iverilog,Design and Test Bench
 RTL design is the implementation of Spec
 What is Simulator?
 1.Simulator is a tool used to simulate the design
--iverilog:
--Design:
--Test Bench:
+2.RTL design(implementation of spec) is checked for the adherence to the spec by simulating the design
+-iverilog:It is the simulator which is used to simulate the design
+-Design:Design is the actual verilog code or set of verilog codes which has the intended functionality to meet with the required specifications.
+we use the test bench to check whether the design is obeying with required spec or not by applying stimulus(various inputs) and need to check we are getting desired output or not.
+-Test Bench(TB):Test Bench is the setup to apply stimulus(test_vectors) to the design to check its functionality.
+How Simulator works?
+1.Simulator looks for the change in input signals
+2.If there is no change in input value there is no change in output value.
+  1.Simulator is looking for change in values of input
+Design and Testbench setup:
+testbench1_SS
+1.Here we have our design with one or more than primary inputs and primary outputs
+2.So we are generating the stimulus to the primary inputs by stimulus generator and
+3.To observe the stimulus at primary output we are using stimulus observer to check whether we are getting desired output for desired input
+Iverilog based Simulation flow:
+The design and the Test Bench(TB) are applied to simulator(iverilog) as we know that simulator always looks for change in input value so that there will be change in output value,
+The Simulator(iverilog) generates the change in output in VCD(Value Change Dump) format and to view the VCD file GTKwave is used to check the output in waveform.
