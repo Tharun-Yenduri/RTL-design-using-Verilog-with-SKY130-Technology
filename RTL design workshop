@@ -10,7 +10,7 @@ What is Simulator?
 -iverilog:It is the simulator which is used to simulate the design
 -Design:Design is the actual verilog code or set of verilog codes which has the intended functionality to meet with the required specifications.
 we use the test bench to check whether the design is obeying with required spec or not by applying stimulus(various inputs) and need to check we are getting desired output or not.
--Test Bench(TB):Test Bench is the setup to apply stimulus(test_vectors) to the design to check its functionality.
+-Test Bench(TB):Test Bench is the setup to apply stimulus(test_vectors) to the design to check its functionality(to give various inputs and check whether it is obeying the spec or not).
 How Simulator works?
 1.Simulator looks for the change in input signals
 2.If there is no change in input value there is no change in output value.
