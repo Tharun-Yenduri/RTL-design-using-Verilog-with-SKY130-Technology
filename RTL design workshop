@@ -21,6 +21,8 @@ testbench1_SS
 2.So we are generating the stimulus to the primary inputs by stimulus generator and
 3.To observe the stimulus at primary output we are using stimulus observer to check whether we are getting desired output for desired input
 ![image](https://user-images.githubusercontent.com/90343497/163569916-908a52e0-6608-4b80-ac67-bc9ed5cea4a6.png)
+The above image depicts the testbench
+Design will be instantiated in the test bench
 Iverilog based Simulation flow:
 The design and the Test Bench(TB) are applied to simulator(iverilog) as we know that simulator always looks for change in input value so that there will be change in output value,
 The Simulator(iverilog) generates the change in output in VCD(Value Change Dump) format and to view the VCD file GTKwave is used to check the output in waveform.
